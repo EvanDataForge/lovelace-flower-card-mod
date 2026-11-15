@@ -87,7 +87,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git status
-          git commit -m "Add new build" -a
+          git diff --quiet || git commit -m "Add new build" -a
           
       # SCHRITT 9: Änderungen zurück ins Repository pushen
       # Build-Artefakte werden für Release verfügbar gemacht
